@@ -37,7 +37,8 @@ body{
 	margin-left: 20px;
 }		
 .mode{
-	width: 90px;
+	width: 15%;
+	max-width: 90px;
 	height: 35px;
 	background-color: #86DAF2;
 	margin-right: 10px;
@@ -60,7 +61,8 @@ body{
 	margin-left: 20px;
 }
 .triptype{
-	width: 80px;
+	width: 12%;
+	max-width: 80px;
 	height: 15px;
 	margin-top: 25px;
 	margin-right: 20px;
@@ -96,8 +98,12 @@ body{
 	width: 50%;
 
 }
+#date{
+	display: flex;
+	width: 40%;
+}
 .date{
-	width: 30%;
+	width: 50%;
 	height: 30px;
 	margin-left: 3px;
 	background-color: #F9E93F;
@@ -159,16 +165,24 @@ body{
 }
 
 #hamburger{
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
 	background-color: red;
+	display: none;
 }
 @media(max-width: 700px){
 	#logo{
 		background-color: red;
 	}
+	#disappearset{
+		display: none;
+	}
 	#main{
 		height: 220px;
+	}
+	#hamburger{
+		display: inline-block;
+		margin-left: 3px;
 	}
 	#itinery{
 		flex-direction: column;
@@ -192,6 +206,75 @@ body{
 	}
 
 }	
+@media(max-width: 500px){
+	#logo{
+		background-color: green;
+	}
+	.setting{
+		display: none;
+	}
+	#disappearset{
+		display: none;
+	}
+	#main{
+		height: 315px;
+	}
+
+	#hamburger{
+		display: inline-block;
+		margin-left: 3px;
+	}
+	#itinery{
+		flex-direction: column;
+	}
+	#switch{
+		display: none;
+	}
+	#departure{
+		margin-bottom: 15px;
+	}
+	#location{
+		width: 100%;
+		flex-direction: column;
+	}
+	.location{
+		width: 100%;
+	}
+	#date{
+		width: 100%;
+		margin-bottom: 20px;
+		
+	}
+	#date-class{
+		margin-top: 20px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	#class{
+		width: 100%;
+	}
+	.ad-name{
+		min-width: 150px;
+	}
+	.ad-pictures{
+		flex-direction: column;
+	}
+	.ad1{
+		width: 100%;
+	}
+	.ad2s{
+		width: 100%;
+		margin-top: 3px;
+		flex-direction: column;
+	}
+	.ad2{
+		width: 100%;
+		margin-left: 0px;
+		margin-bottom: 3px;
+	}
+
+}
 
 
 

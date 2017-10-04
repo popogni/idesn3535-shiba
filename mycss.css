@@ -16,6 +16,17 @@
 		}
 		a:link{
 			text-decoration: none;
+			color: #000;
+		}
+		a:visited{
+			text-decoration: none;
+			color: #000;
+		}
+		a:hover{
+			text-decoration: none;
+			color: #fff;
+			background:#e44;
+			padding: 2px;
 		}
 		#header #intro{
 			font-style: italic;
@@ -40,10 +51,11 @@
 		@media(max-width: 800px){
 			#header{
 				margin: 2%;
+				min-width: 280px;
 			}
 			#header #home{
-				font-size: 1.3em;
-				font-family: bold;
+				font-size: 1.5em;
+				font-family: bolder;
 			}
 			#contents{
 				display: flex;

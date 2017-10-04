@@ -1,0 +1,197 @@
+body{
+}
+#header{
+	margin-bottom: 0px;
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;	
+}
+#first-line{
+	margin-left: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+#logo{
+	justify-content: flex-start;
+	background-color: #86DAF2;
+	width: 180px;
+	height:40px;
+	text-align: center;
+	display: flex;
+	font-size: 1em;
+}
+#settings{
+	display: flex;
+	justify-content: flex-end;
+}
+.setting{
+	width: 80px;
+	height: 40px;
+	font-size: 1em;
+	background-color: #3D18C8;
+	margin-left: 10px;
+}		
+#modes{
+	display: flex;
+	margin-top: 40px;
+	margin-left: 20px;
+}		
+.mode{
+	width: 90px;
+	height: 35px;
+	background-color: #86DAF2;
+	margin-right: 10px;
+}
+#main{
+	margin: 0px;
+	width: 100%;
+	height: 180px;
+	background-color: #86DAF2;
+	padding: 10px;
+
+}
+#main-center{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 900px;
+}
+#triptypes{
+	display: flex;
+	margin-left: 20px;
+}
+.triptype{
+	width: 80px;
+	height: 15px;
+	margin-top: 25px;
+	margin-right: 20px;
+	background-color: #F57F81;
+}
+
+#itinery{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+#location{
+	display: flex;
+	flex-direction: row;
+	width: 50%;
+}
+.location{
+	width: 50%;
+	height: 30px;
+	background-color: #F9E93F;
+}
+#switch{
+	width: 30px;
+	height: 30px;
+	background-color: #FC8B2E;
+}
+#date-class{
+	display: flex;
+	flex-direction: row;
+	width: 50%;
+
+}
+.date{
+	width: 30%;
+	height: 30px;
+	margin-left: 3px;
+	background-color: #F9E93F;
+}
+#class{
+	width: 60%;
+	height: 30px;
+	margin-left: 3px;
+	background-color: #FACB31;
+}
+#search{
+	margin-top: 20px;
+	display: flex;
+	justify-content: flex-end;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+#search-box{
+	margin: 0px;
+	width: 30%;
+	height: 50px;
+	background-color: #2AF537;
+}
+#ads{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 900px;
+}
+.ad{
+	margin-top: 30px;
+	margin-left: 20px;
+	display: flex;
+	flex-direction: column;
+}
+.ad-name{
+	width: 30%;
+	height: 30px;
+	background-color: #FA9B03;
+	margin-bottom: 3px;
+}
+.ad-pictures{
+	display: flex;
+	flex-direction: row;
+}
+.ad1{
+	width: 50%;
+	height: 200px;
+	background-color: #FA9B03;
+}
+.ad2s{
+	width: 50%;
+	display: flex;
+}
+.ad2{
+	width: 50%;
+	height: 200px;
+	background-color: #FA9B03;
+	margin-left: 3px;
+}
+
+#hamburger{
+	width: 30px;
+	height: 30px;
+	background-color: red;
+}
+@media(max-width: 700px){
+	#logo{
+		background-color: red;
+	}
+	#main{
+		height: 220px;
+	}
+	#itinery{
+		flex-direction: column;
+	}
+	#location{
+		width: 100%;
+	}
+	#date-class{
+		margin-top: 20px;
+		width: 100%;
+	}
+	.ad-pictures{
+		flex-direction: column;
+	}
+	.ad1{
+		width: 100%;
+	}
+	.ad2s{
+		width: 100%;
+		margin-top: 3px;
+	}
+
+}	
+
+
+

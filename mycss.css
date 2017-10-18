@@ -3,6 +3,9 @@
 			margin-left: auto;
 			margin-right: auto;
 			text-align: center;
+			display: flex;
+			flex-direction: column;
+
 		}
 		#header{
 			margin: 30px 40px;
@@ -34,6 +37,10 @@
 		#contents{
 			display: flex;
 			justify-content: center;
+			width: 90%;
+			max-width: 1000px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 		.floating-box{
 			font-family: 'Josefin Sans';

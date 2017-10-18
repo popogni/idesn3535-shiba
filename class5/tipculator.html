@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Seong eun Park</title>
+	<link rel="stylesheet" href="../normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<style>
+		body{
+			display: flex;
+			flex-direction: column;
+			margin: auto;
+			width: 80%;
+			max-width: 500px;
+			min-width: 300px;
+			font-family: "Roboto";
+
+		}
+		header{ 			
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			width: 100%;
+			height: 80px;
+			background-color: #f44242;
+	  	}
+	  	header > #header{
+	  		border: 0px solid;
+	  		color: #fff;
+	  		margin: auto;
+	  		text-align: center;
+	  	}
+	  	#calculator{
+	  		height: 300px;
+	  		display: flex;
+	  		flex-direction: column;
+	  		
+	  	}
+	  	#buttons{
+	  		background-color: #01004f;
+	  		border: none;
+	  		height: 100%;
+	  		width: 40%;
+	  	}
+	  	.box{
+	  		width: 100%;
+	  		height: 25%;
+	  		background-color: #020099;
+	  		display: flex;
+	  		flex-direction: row;
+	  		justify-content: space-between;
+	  		padding: 15px 20px;
+	  		margin: auto;
+	  	}
+	  	#tippercent{
+	  		width: 60%;
+	  		height: 100%;	
+	  		text-align: center;
+	  		font-size: 1.3em;
+
+	  	}
+	  	.box > div{
+			font-size: 1.3em;
+			font-style: bold;
+			color: #fff;
+	  	}
+	  	.box > input{
+	  		background-color: #01004f;
+	  		border: none;
+	  		height: 100%;
+	  		width: 40%;
+	  		color: #fff;
+	  		text-align: center;
+	  		font-size: 1.3em;
+	  	}
+	  	button{
+	  		margin: 0px;
+	  		width: 20%;
+	  		height: 100%;
+	  		font-size: 1.3em;
+	  	}
+
+	</style>
+</head>
+<body>
+	<header>
+		<div id="header">
+			<h1>Tip calculator!</h1>
+		</div>
+	</header>
+	<div id="calculator">
+		<div class="box" id="billtotalbox">
+			<div><li>Bill Total ($) : </li></div>
+			<input type="text" id="billtotal">
+		</div>
+		<div class="box">
+			<div><li>Tip (%) : </li></div>
+			<div id="buttons"><button id="minus">-</button><input type="text" id="tippercent" value="15"><button id="plus">+</button></div>
+		 </div>
+		<div class="box"> 
+			<div><li>Tip Total : </li></div>
+			<input type="text" id="tiptotal" value="0">
+		</div>
+		<div class="box">
+			<div><li>Total to Pay: </li></div>
+			<input type="text" id="totaltopay">
+		</div>
+	</div>
+	<script>
+		const Billtotal=document.getElementById("billtotal");
+		const Tippercent=document.getElementById("tippercent");
+		const Tiptotal=document.getElementById("tiptotal");
+		const Totaltopay=document.getElementById("totaltopay");
+		const Tipminus=document.getElementById("minus");
+		const Tipplus=document.getElementById("plus");
+
+		function update(){
+			Tiptotal.value=(parseFloat(Billtotal.value)*(parseFloat(Tippercent.value)*0.01)).toFixed(2);
+			Totaltopay.value=parseFloat(Billtotal.value)+parseFloat(Tiptotal.value);
+		}
+		function tipminus(){
+			Tippercent.value--;
+		}
+		function tipplus(){
+			Tippercent.value++;
+		}
+
+		Billtotal.addEventListener('keyup',update);
+		Tippercent.addEventListener('keyup',update);
+		Tipminus.addEventListener('click',tipminus);
+		Tipplus.addEventListener('click',tipplus);
+		Tipminus.addEventListener('click',update);
+		Tipplus.addEventListener('click',update);
+	</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Colors</title>
+    <link href="colors.css" rel="stylesheet">
+    <link href="../normalize.css" rel="stylesheet">
+    <script>
+        function setColor() {
+        }
+     
+    </script>
+  </head>
+  <body>
+<div class="nav">
+    <button onclick="redColorChange(); redactiveState() " class="colorbox" id="addRed">Add Red</button>
+    <button onclick="blueColorChange(); blueactiveState()" class="colorbox" id="addBlue">Add Blue</button>
+    <button onclick="yellowColorChange(); yellowactiveState()" class="colorbox" id="addYellow">Add Yellow</button>
+</div>
+<div id="splotch">
+<script>
+function redactiveState() {
+    var elementButton = document.getElementById("addRed");
+    elementButton.classList.toggle("enabled");
+};
+function blueactiveState() {
+    var elementButton = document.getElementById("addBlue");
+    elementButton.classList.toggle("enabled");
+};
+function yellowactiveState() {
+    var elementButton = document.getElementById ("addYellow");
+    elementButton.classList.toggle("enabled");
+};
+function redColorChange() {
+    var element = document.getElementById("splotch");
+    element.classList.toggle("red");
+}
+function blueColorChange() {
+    var element = document.getElementById("splotch");
+    element.classList.toggle("blue");
+}
+function yellowColorChange() {
+    var element = document.getElementById("splotch");
+    element.classList.toggle("yellow");
+}
+function active() {
+}
+</script>
+    </div>
+</body>
+</html>
